@@ -8,6 +8,7 @@
 * Must be able to format text
 * Posts must be stored somewhere to be readable later
 * Other people should be able to read blog posts
+* Must be able to log in to identify user
 
 ### Secondary Requirements - Should-haves
 * Poster should be able to give title to post
