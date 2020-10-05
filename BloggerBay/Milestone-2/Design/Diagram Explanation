@@ -1,0 +1,29 @@
+# Bloggerbay Design Diagrams Explanation
+## Diagram 1: Data Hierarchy ("cs350-1.png")
+* Each USER has one ACCOUNT, connected to a BLOG, many of which are stored on one SERVER.
+* Each ACCOUNT/BLOG has one or more POSTs, each of which has a BODY and DATA.
+* The BODY of each POST is comprised of the POST's TITLE and BODY, which is made up of TEXT and IMAGES, both of which can potentially house LINKS to outside the server.
+* IMAGES can each hold one LINK, while the TEXT can hold many.
+
+* In addition to its BODY, each POST has relevant DATA, comprised of multiple COMMENTS, multiple TAGS, and its singular UPLOAD DATE.
+* Each COMMENT can have multiple REPLIES.
+* Each UPLOAD DATE can have multiple EDIT DATEs.
+
+## Diagram 2: Basic Data/View structure
+* The starting view shows a login screen at the top, with the posts showing in reverse chronological order.
+* The data, meanwhile, shows the posts in correct chronological order.
+* When a new post is made by someone with the correct login information, which replaces the login box with buttons for creating a new post and logging out,
+* It brings up an interface for creating the body of a new post (Title, text, images).
+* (Tags could be part of the body, as well, added by the user at this point.)
+* Once the post is completed and the user hits the "Post" button, the new post is appended to the end of the database, meaning it becomes the newest post,
+* Visible on top of the blog.
+
+## Diagram 3: Editing posts
+* A user who provides valid login credentials has the ability to Create, Read, Update, and Delete blog entries.
+* A user without credentials can Read blog posts, but cannot Create, Update, or Delete entries.
+* The view, with proper credentials, also provides additional "Edit" and "Delete" buttons for use of the Update and Delete permissions.
+* If the user selects "Edit", the post selected is pulled up on the "New post" interface, with its body visible and its data already taken into consideration.
+* The user can make changes to the post, optionally, and select the "Submit" key, which changes the post according to the changes made in the editor.
+* The "Delete" key brings up an option to confirm or deny the deletion of the post.
+* If "N" or "No" key is selected, then no change is made to the data or view.
+* If the "Y" or "Yes" key is selected, the post is deleted, and subsequent posts are moved up in order in both the data and view.
